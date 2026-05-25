@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercise 49: Online Classified</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+    <div>
+        <h1>Online Classifieds Search Form</h1>
+        <hr>
+
+        <form id="classifiedForm">
+            <table border="0" cellpadding="4" cellspacing="0">
+                <tr>
+                    <td colspan="2">1) Search for a classified in the following sections:</td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="section" value="Employment"> Employment</label></td>
+                    <td><label><input type="radio" name="section" value="Personal"> Personal</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="section" value="For Sale" checked> For Sale</label></td>
+                    <td><label><input type="radio" name="section" value="Miscellaneous"> Miscellaneous</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="radio" name="section" value="Housing"> Housing</label></td>
+                    <td><label><input type="radio" name="section" value="All"> All of the above</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2">2) Search the following publications:</td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="publication" value="Midwest" checked> Midwest times</label></td>
+                    <td><label><input type="checkbox" name="publication" value="Modern"> Modern News</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="publication" value="Employment"> Employment Today</label></td>
+                    <td><label><input type="checkbox" name="publication" value="GreatLakes" checked> Great Lakes Classifieds</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="publication" value="Middleton"> Middleton Daily</label></td>
+                    <td><label><input type="checkbox" name="publication" value="Cashtown"> Cashtown Daily News</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2">3) From to</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="dateFrom" placeholder="mm/dd/yy"> to <input type="text" name="dateTo" placeholder="mm/dd/yy"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">4) Enter a few keywords to describe the classified.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="keywords"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">5) Click one of the options below:</td>
+                </tr>
+                <tr>
+                    <td><button type="button" id="btnSearch"><img src="images/Search.gif" alt="Search"> Search</button></td>
+                    <td><button type="button" id="btnHelp"><img src="images/Help.gif" alt="Help"> Help</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" id="btnCancel"><img src="images/Cancel.gif" alt="Cancel"> Cancel</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('btnSearch').addEventListener('click', function() {
+            alert('Search simulation triggered successfully!');
+        });
+
+        document.getElementById('btnHelp').addEventListener('click', function() {
+            alert('Displaying help documentation panel...');
+        });
+
+        document.getElementById('btnCancel').addEventListener('click', function() {
+            document.getElementById('classifiedForm').reset();
+        });
+    </script>
+
+    </body>
+</html>

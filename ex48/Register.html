@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Exercise 48: Register</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <img src="images/Jackson.gif" alt="Register Icon">
+            <h1>Registration Form</h1>
+            <p>Register your Jackson Electronics product here</p>
+        </div>
+            <form id="registrationForm">    
+                <div>
+                    <label>First Name:</label>
+                    <input type="text" name="firstName">
+                    <label>Last Name:</label>
+                    <input type="text" name="lastName">
+                </div>
+                <div>
+                    <label>Address #1:</label>
+                    <input type="text" name="address1">
+                </div>
+
+                <div>
+                    <label>Address #2:</label>
+                    <input type="text" name="address2">
+                </div>
+
+                <div>
+                    <label>City:</label>
+                    <input type="text" name="city">
+                    <label>State:</label>
+                    <input type="text" name="state">
+                    <label>Zip:</label>
+                    <input type="text" name="zip">
+                </div>
+
+                <div>
+                    <label>Country:</label>
+                    <input type="text" name="country" value="United States">
+                </div>
+                <hr>
+                <div>
+                    <label>Product:</label>
+                    <select name="product">
+                        <option value="ScanMaster">ScanMaster</option>
+                        <option value="PrintMaster">PrintMaster</option>
+                        <option value="ViewMaster">ViewMaster</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Date Purchased:</label>
+                    <input type="text" name="datePurchased">
+                </div>
+
+                <div>
+                    <label>Serial #:</label>
+                    <input type="text" name="serialNumber">
+                </div>
+
+                <div>
+                    <label>Used for:</label>
+                    <div>
+                        <label><input type="radio" name="usedFor" value="Home"> Home</label>
+                        <label><input type="radio" name="usedFor" value="Educational"> Educational Institution</label>
+                        <label><input type="radio" name="usedFor" value="Business"> Business</label>
+                        <label><input type="radio" name="usedFor" value="Other"> Other</label>
+                        <label><input type="radio" name="usedFor" value="Government"> Government</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label>System (check all that apply):</label>
+                    <div>
+                        <label><input type="checkbox" name="system" value="Windows"> Windows</label>
+                        <label><input type="checkbox" name="system" value="UNIX"> UNIX</label>
+                        <label><input type="checkbox" name="system" value="Macintosh"> Macintosh</label>
+                        <label><input type="checkbox" name="system" value="Other"> Other</label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div>
+                    <label for="comments">Comments?:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+
+                <div>
+                    <button type="button" id="btnRegister">Click to register</button>
+                    <button type="button" id="btnCancel">Click to cancel</button>
+                </div>
+
+            </form>
+        </div>
+
+        <script>
+            document.getElementById('btnRegister').addEventListener('click', function() {
+                alert('Registration data submitted successfully!');
+            });
+
+            document.getElementById('btnCancel').addEventListener('click', function() {
+                document.getElementById('registrationForm').reset();
+            });
+        </script>
+    </body>
+</html>
