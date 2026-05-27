@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Newborn Registration</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <form action="#" method="post" onsubmit="alert('Newborn registration submitted successfully!'); return false;">   
+            <div style="text-align: center;">
+                <img src="images/Logo.gif" alt="Travel Icon">
+            </div>
+            <hr>
+            
+            <div>
+                <label for="date">Date:</label>
+                <input type="text" id="date" placeholder="mm/dd/yy" class="input-date">
+            </div>
+
+            <div>
+                <ol>
+                    <li>
+                        <label for="infantFirst">Infant's first name:</label>
+                        <input type="text" id="infantFirst" name="infantFirst">
+                        <label for="infantLast">Last:</label>
+                        <input type="text" id="infantLast" name="infantLast">
+                    </li>
+
+                    <li>
+                        <label for="medRecord">Medical Record #:</label>
+                        <input type="text" id="medRecord" name="medRecord">
+                    </li>
+
+                    <li>
+                        <label for="dateOfBirth">Date of birth:</label>
+                        <input type="text" id="dateOfBirth" placeholder="mm/dd/yy">
+                    </li>
+
+                    <li>
+                        <label for="birthWeight">Birth weight:</label>
+                        <input type="text" id="birthWeight" name="birthWeight">
+                    </li>
+
+                    <li>
+                        <label for="apgarScore">APGAR score :</label>
+                        <input type="text" id="apgarScore" name="apgarScore">
+                    </li>
+
+                    <li>
+                        <label for="motherFirst">Mother's first name:</label>
+                        <input type="text" id="motherFirst" name="motherFirst">
+                        <label for="motherLast">Last:</label>
+                        <input type="text" id="motherLast" name="motherLast">
+                    </li>
+
+                    <li>
+                        <label for="fatherFirst">Father's first name:</label>
+                        <input type="text" id="fatherFirst" name="fatherFirst" >
+                        <label for="fatherLast">Last:</label>
+                        <input type="text" id="fatherLast" name="fatherLast">
+                    </li>
+
+                    <li>
+                        <label for="physician">Physician (check<br>all that apply:)</label><br>
+                        <select name="physician" multiple size="4" id="physician">
+                            <option value="Warren Albert">Dr. Warren Albert</option>
+                            <option value="Maria Alvarez">Dr. Maria Alvarez</option>
+                            <option value="Karen Brinkman">Dr. Karen Brinkman</option>
+                            <option value="Micheal Kerry">Dr. Micheal Kerry</option>
+                        </select>
+                    </li>
+
+                    <div>
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Cancel">
+                    </div>
+
+            </form>
+    </body>
+</html>

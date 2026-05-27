@@ -1,0 +1,50 @@
+body {
+    background-color: #008080; 
+    color: white;
+    font-family: "Times New Roman";
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+form {
+    width: 680px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+form > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+body form div label {
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+ol {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+ol li {
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+select {
+    padding: 3px 5px;
+    background-color: #ffffff;
+    font-family: "Times New Roman";
+}
+
+input[type="submit"],
+input[type="reset"] {
+    color: #ff0000;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 12px;
+}
