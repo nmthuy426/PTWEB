@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.form-container {
+    width: 500px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-header {
+    font-size: 16px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+form {
+    padding: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.half-width {
+    width: 48%;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"], 
+select, 
+textarea {
+    padding: 6px;
+    border: 1px solid #eaeaea;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Tùy chỉnh riêng cho thẻ select để hiển thị mũi tên rõ ràng */
+select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical; /* Chỉ cho phép kéo dãn theo chiều dọc */
+}
+
+/* Định dạng nút Send */
+.btn-send {
+    background-color: #9a2b50; /* Màu đỏ mận */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    background-color: #7d2140;
+}
