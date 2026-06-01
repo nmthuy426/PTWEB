@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script src="main.js"></script>
+        <script type="text/javascript">
+            function xuly(a,b,pt) {
+                kq=thuchien(eval(a),eval(b),pt);
+                document.getElementById("td_result").innerText=kq;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <table border="1">
+                <tr>
+                    <td>Hệ số a:</td>
+                    <td><input type="text" id="hsa" ></td>
+                </tr>
+                <tr>
+                    <td>Hệ số b:</td>
+                    <td><input type="text" id="hsb" ></td>
+                </tr>
+                <tr>
+                    <td> Kết quả: </td>
+                    <td id="td_result"></td>
+                </tr>       
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Cộng" onclick="xuly(hsa.value, hsb.value, '+')">
+                        <input type="button" value="Trừ" onclick="xuly(hsa.value, hsb.value, '-')">
+                        <input type="button" value="Nhân" onclick="xuly(hsa.value, hsb.value, '*')">
+                        <input type="button" value="Chia" onclick="xuly(hsa.value, hsb.value, '/')">
+                    </td>    
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
