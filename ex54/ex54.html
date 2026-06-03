@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Exercise 54: Math function</title>
+        <script type="text/javascript">
+            function timMax(a, b, c) {
+                a = Number(a);
+                b = Number(b);  
+                c = Number(c);
+                var arr = [a, b, c];
+                var max = arr[0];
+                
+                for (var i = 1; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i]; // Cập nhật lại max nếu tìm thấy số lớn hơn
+                    }
+                }
+                document.getElementById("td_result").innerText = max;
+            }
+
+            function timMin(a, b, c) {
+                a = Number(a);
+                b = Number(b);
+                c = Number(c);
+                var arr = [a, b, c];
+                var min = arr[0];
+                for (var i = 1; i < arr.length; i++) {
+                    if (arr[i] < min) {
+                        min = arr[i]; // Cập nhật lại min nếu tìm thấy số nhỏ hơn
+                    }
+                }
+                document.getElementById("td_result").innerText = min;
+            }
+
+            function tinhSin(a) {
+                a = Number(a);
+                var radian = a * Math.PI / 180;
+                var kq = Math.sin(radian);
+                document.getElementById("td_result").innerText = kq;
+            }
+
+            function tinhCos(a) {
+                a = Number(a);
+                var radian = a * Math.PI / 180;
+                var kq = Math.cos(radian);
+                document.getElementById("td_result").innerText = kq;
+            }
+
+            function tinhLuyThua(a, b) {
+                a = Number(a);
+                b = Number(b);
+                var kq = Math.pow(a, b);
+                document.getElementById("td_result").innerText = kq;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <table id="myTable" border="1">
+                <tr>
+                    <td>a:</td>
+                    <td><input type="text" id="hsa"></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="text" id="hsb"></td>
+                </tr>
+                <tr>
+                    <td>c:</td>
+                    <td><input type="text" id="hsc"></td>
+                </tr>
+                <tr>
+                    <td> Result: </td>
+                    <td id="td_result"></td>
+                </tr>       
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="MAX" onclick="timMax(hsa.value, hsb.value, hsc.value)">
+                        <input type="button" value="MIN" onclick="timMin(hsa.value, hsb.value, hsc.value)">
+                        <input type="button" value="sin(a)" onclick="tinhSin(hsa.value)">
+                        <input type="button" value="Cos(a)" onclick="tinhCos(hsa.value)">
+                        <input type="button" value="a^b" onclick="tinhLuyThua(hsa.value, hsb.value)">
+                    </td>    
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
