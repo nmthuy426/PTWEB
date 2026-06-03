@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script type="text/javascript">
+            var pNum = ["C112", "B124", "U125"];
+            var desc = ["Mouse", "Keyboard US", "USB KingMax"];
+            var price = [19.95, 29.95, 39.95];
+            var rowCount = pNum.length;
+
+            function loadData() {
+                var mytbody = document.getElementById("mytbody");
+
+                for (var i = 0; i < rowCount; i++) {        
+                    var id = i + 1;
+                    var newRow = "<tr>";
+                    newRow += "<td>" + pNum[i] + "</td>";
+                    newRow += "<td>" + desc[i] + "</td>";
+                    newRow += "<td>" + price[i] + " $</td>";
+                    newRow += "<td><input type='text' id='qty" + id + "'></td>";
+                    newRow += "<td><input type='text' id='item" + id + "' readonly></td>";
+                    newRow += "</tr>";
+                    mytbody.innerHTML += newRow;
+                }
+            }
+
+            function tinhDong() {
+                for (var i = 1; i <= rowCount; i++) {
+                    var qtyInput = document.getElementById("qty" + i);
+                    var sl = qtyInput.value;
+                    var kq = document.getElementById("item" + i);
+                    var gia = price[i - 1];
+
+                    if (sl == "") {
+                        kq.value = "";
+                        continue;
+                    }
+
+                    if (sl <= 0) {
+                        alert("Vui lòng nhập số không âm!");
+                        qtyInput.value = "";
+                        kq.value = "";
+                    } else {
+                        kq.value = Number(sl) * gia;
+                    }
+                }
+                tinhTong();
+            }
+
+            function tinhTong() {
+                var tong = 0;
+                for (var i = 1; i <= rowCount; i++) {
+                    var tien = Number(document.getElementById("item" + i).value);
+                    if (!isNaN(tien)) {
+                        tong += tien;
+                    }
+                }
+                document.getElementById("total_box").value = tong;
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Part Number</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Item total</th>
+                </tr>
+            </thead>
+            <tbody id="mytbody">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total:</td>
+                    <td><input type="text" id="total_box" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <button type="button" style="background-color: orange;" onclick="tinhDong()">Calculate</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <script type="text/javascript">
+            loadData();
+        </script>
+    </body>
+</html>

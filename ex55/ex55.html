@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Exercise 55: The quadratic equation</title>
+        <script>
+            function solve() {
+                a = document.getElementById("hsa").value;
+                b = document.getElementById("hsb").value;
+                c = document.getElementById("hsc").value;
+                a = Number(a);
+                b = Number(b);
+                c = Number(c);
+
+                kq = document.getElementById("td_result");
+
+                if (a == 0) {
+                    ptb1(b, c);
+                    return;
+                }
+                else {
+                    var delta = b * b - 4 * a * c;
+                    if (delta < 0) {
+                        kq.innerText = "Phương trình vô nghiệm";
+                    }
+                    else if (delta == 0) {
+                        kq.innerText = "Phương trình có nghiệm kép: x = " + (-b / (2 * a));
+                    }
+                    else {
+                        var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                        var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                        kq.innerText = "Phương trình có hai nghiệm phân biệt: x1 = " + x1 + ", x2 = " + x2;
+                    }
+                }
+            }
+
+            function ptb1(a, b) {
+                if (a==0 && b==0) {
+                    kq.innerText = "Phương trình có vô số nghiệm";
+                }
+                else if (a==0 && b!=0) {
+                    kq.innerText = "Phương trình vô nghiệm";
+                }
+                else {
+                    kq.innerText = (-b/a);
+                }
+            }
+
+            function clearForm() {
+                document.getElementById("hsa").value = "";
+                document.getElementById("hsb").value = "";
+                document.getElementById("hsc").value = "";
+                document.getElementById("td_result").innerHTML = "";
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <td colspan="2" style="background-color: #d9ead3; text-align: center;">
+                    The quadratic equation
+                </td>
+            </tr>
+            <tr>
+                <td>a:</td>
+                <td><input type="text" id="hsa"></td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td><input type="text" id="hsb"></td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td><input type="text" id="hsc"></td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td id="td_result"></td>
+            </tr>       
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="button" onclick="solve()"> Find solution </button>
+                    <button type="button" onclick="clearForm()"> Clear </button>
+                </td>    
+            </tr>
+        </table>
+    </body>
+</html>
