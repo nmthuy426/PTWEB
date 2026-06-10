@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Member Registration</title>
+        <link rel="stylesheet" href="css/main.css"/>
+        <script src="js/dataset.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Member Registration</h2>
+            
+            <form name="myform" id="registrationForm">
+                <table>
+                    <tr>
+                        <td>Name(*)</td>
+                        <td>
+                            <input type="text" name="nameInput" id="nameInput"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Birthday(*)</td>
+                        <td>
+                            Day: <select id="daySelect"></select>
+                            Month: <select id="monthSelect"></select>
+                            Year: <select id="yearSelect"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender(*)</td>
+                        <td>
+                            <input type="radio" name="gender" value="Man" checked/> Man
+                            <input type="radio" name="gender" value="Woman"/> Woman
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email(*)</td>
+                        <td>
+                            <input type="text" name="emailInput" id="emailInput"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">Your favorite:</td>
+                        <td>
+                            <input type="checkbox" name="hobby" value="Shopping" checked/> Shopping<br/>
+                            <input type="checkbox" name="hobby" value="Tourism" checked/> Tourism<br/>
+                            <input type="checkbox" name="hobby" value="Chat" checked/> Chat<br/>
+                            <input type="checkbox" name="hobby" value="Read a book" checked/> Read a book<br/>
+                            <input type="checkbox" name="hobby" value="Listening to music" checked/> Listening to music
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">Your favorite color:</td>
+                        <td>
+                            <input type="radio" name="color" value="Blue" checked/> <span class="bg-blue">Blue</span><br/>
+                            <input type="radio" name="color" value="Red"/> <span class="bg-red">Red</span><br/>
+                            <input type="radio" name="color" value="Yellow"/> <span class="bg-yellow">Yellow</span><br/>
+                            <input type="radio" name="color" value="Green"/> <span class="bg-green">Green</span><br/>
+                            <input type="radio" name="color" value="Violet"/> <span class="bg-violet">Violet</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-left: 100px; padding-top: 10px;">
+                            <button type="button" onclick="handleRegistration()">Sign up</button>
+                            <button type="button" onclick="handleReset()">Reset</button> 
+                        </td>
+                    </tr>
+                </table> 
+            </form>
+
+            <table border="1" class="result-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Birthday</th>
+                        <th>Hobbies</th>
+                        <th>Colors</th>
+                    </tr>
+                </thead>   
+                <tbody id="memberbody"> 
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            // Gọi hàm từ file main.js để nạp ngày tháng năm
+            loadDateDropdowns();
+            
+            // Lấy tbody và đổ data từ dataset.js vào
+            memberbody = document.getElementById("memberbody");
+            loadInitialMembers(initialMembers, memberbody); 
+        </script>
+    </body>
+</html>

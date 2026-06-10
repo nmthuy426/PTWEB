@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+#container {
+    width: 650px;
+    border: 1px solid #333;
+    padding: 15px;
+    margin: 20px;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 5px;
+}
+button {
+    background-color: #ccc;
+    border: 1px solid #999;
+    padding: 4px 10px;
+    width: 110px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #bbb;
+}
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+#addPosition,
+#removePosition,
+#modifyPosition {
+    width: 50px;
+}
+#addContent,
+#modifyContent {
+    width: 160px;
+}
+#webNodeTitle {
+    margin-top: 15px;
+    font-weight: normal;
+}
