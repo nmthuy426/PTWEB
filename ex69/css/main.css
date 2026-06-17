@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tbody tr:hover
+{
+    background-color: yellow;
+    font-style: italic;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #2e6b31;
+}

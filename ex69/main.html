@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Employee AJAX Example</title>
+        <style>
+            @import url(css/main.css);
+        </style>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <button onclick="loadEmployees()">Load Employee Data</button>
+        <br/><br/>
+        <label for="titleDropdown">Select Title:</label>
+        <select id="titleDropdown" onchange="showEmployeesByTitle(this.value)">
+            <option value="">-- Choose a title --</option>
+        </select>
+        <br/><br/>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody id="employeeBody">
+            </tbody>
+        </table>
+    </body>
+</html>
