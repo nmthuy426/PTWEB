@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <button onclick="loadCDCollection()">Get my CD collection</button>
+        <table id="cdtable">
+            <thead>
+                <tr>
+                    <th>Artist</th>
+                    <th>Title</th>
+                    <th>Country</th>
+                    <th>Company</th>
+                    <th>Price</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+        <script>
+            var dataset_path="dataset/cd_catalog.xml"
+            var tbody=document.getElementById("tbody")
+            load_fromxml(dataset_path,tbody)
+        </script>
+    </body>
+</html>
