@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <style>
+            @import url(css/maincss.css);
+        </style>
+        <script src="js/main.js"></script>
+        <script src="js/students.js"></script>
+    </head>
+    <body>
+        <table id="students">
+            <thead>
+                <tr>
+                    <th onclick="sortTableByID()">Student ID</th>
+                    <th>Student Name</th>
+                    <th>Student Birthday</th>
+                    <th>Student Gender</th>
+                </tr>
+            </thead>
+            <tbody id="bodystudent">
+            </tbody>
+        </table>
+        <script>
+            load_students(students,document.getElementById("bodystudent"))
+        </script>
+    </body>
+</html>
